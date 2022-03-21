@@ -1,4 +1,4 @@
-package test;
+//package test;
 public class Auto {
 	
     String modelo;
@@ -24,14 +24,10 @@ public class Auto {
     	
     	for (Asiento i : asientos) {
     		if(i.registro != this.registro || i.registro != this.motor.registro || this.registro != this.motor.registro) {
-    			return "Las piezas no son originales";
-    			break;
-    		}else 
-    			return "Auto original";
+    			return "Las piezas no son originales";	
     	}
-    	
-    	
-    	
+    
     }
-
+    	return "Auto original";	
+  }
 }
