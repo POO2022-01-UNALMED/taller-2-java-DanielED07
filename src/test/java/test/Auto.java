@@ -10,9 +10,9 @@ public class Auto {
     static int cantidadCreados;
     
     
-   public int cantidadAsientos(Auto auto) {
+   public int cantidadAsientos() {
 	   int k=0;
-	   for (Asiento i : auto.asientos) {
+	   for (Asiento i : asientos) {
    		if (i instanceof Asiento) {
    			k++;
    		}
@@ -20,14 +20,14 @@ public class Auto {
 	  return k;
     }
     
-    public String verificarIntegridad(Auto auto) {
+    public String verificarIntegridad() {
     	
-    	for (Asiento i : auto.asientos) {
-    		if(i.registro != auto.registro || i.registro != auto.motor.registro || auto.registro != auto.motor.registro) {
-    			System.out.println("Las piezas no son originales");
+    	for (Asiento i : asientos) {
+    		if(i.registro != this.registro || i.registro != this.motor.registro || this.registro != this.motor.registro) {
+    			return "Las piezas no son originales";
     			break;
     		}else 
-    			System.out.println("Auto original");
+    			return "Auto original";
     	}
     	
     	
